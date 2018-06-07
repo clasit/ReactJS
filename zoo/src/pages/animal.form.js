@@ -38,7 +38,7 @@ class AnimalForm extends React.Component {
 
     handleSubmit(event){
         event.preventDefault();
-
+        
         // Guardar el animal en el LocalStorage
         let animals = window.localStorage.getItem('animals');
         animals = JSON.parse(animals);
@@ -46,17 +46,6 @@ class AnimalForm extends React.Component {
         animals.unshift(this.state);
         animals = JSON.stringify(animals);
         window.localStorage.setItem('animals', animals);
-
-        // Mostrar la imagen
-        if( this.fileInput.files.length) {
-            let file = this.fileInput.files[0];
-            let reader = new FileReader();
-            console.log(file);
-            reader.onloadend = () => {
-                console.log(file);
-                imgSrc: reader.result
-            }
-        }
     }
 
     render() {
