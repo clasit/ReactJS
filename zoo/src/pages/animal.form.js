@@ -24,9 +24,18 @@ class AnimalForm extends React.Component {
                 value = target.checked;
                 break;
             case 'file':
-                // TODO 1: Mostrar la imagen en el DOM: event.target.files
-                // TODO 2: Convertir a base64 para guardar la imagen en el LocaStorage (Ojo máximo 10MB)
-                value = target.files[0].name;
+                // TODO: Investigar si se puedo borrar la imagen anterior, para no gastar memoria del navegador
+                const file = target.files[0];
+                this.imgSrc = window.URL.createObjectURL(file);
+
+                // TODO: (1) Convertir a base64 para guardar la imagen en el LocaStorage (Ojo máximo 10MB)
+                // TODO: (2) Reducir la talla de la imagen.
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function () {
+                    console.log(reader.result);
+                };
+
                 break;
             default:
                 value = target.value;
