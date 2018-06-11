@@ -35,7 +35,6 @@ class AnimalForm extends React.Component {
                 reader.onload = function () {
                     console.log(reader.result);
                 };
-
                 break;
             default:
                 value = target.value;
