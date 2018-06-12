@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import GoogleMapReact from 'google-map-react'
 import { map } from 'leaflet';
 
-var googleMapsClient = require('@google/maps')
 
 const AnyReactComponent = ({ text }) => <div>{text}</div>;
 
