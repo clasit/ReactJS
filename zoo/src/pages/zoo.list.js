@@ -27,6 +27,7 @@ class ZooList extends React.Component {
      * el objeto. Además como lo pone dentro del html, se muestra el objeto en el html.
      */
     selectAnimalMethod2(e){
+        console.log(e);
         const animal = JSON.parse(e.target.dataset.animal);
         console.log(animal);
     }
