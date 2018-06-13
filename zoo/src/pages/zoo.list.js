@@ -26,8 +26,7 @@ class ZooList extends React.Component {
      * Esto sirve para parámetros simples, en caso contrario tendremos que serializar y deserializar
      * el objeto. Además como lo pone dentro del html, se muestra el objeto en el html.
      */
-    selectAnimalMethod2(e){
-        console.log(e);
+    selectAnimalMethod2(e){        
         const animal = JSON.parse(e.target.dataset.animal);
         console.log(animal);
     }
